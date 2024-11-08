@@ -1,0 +1,90 @@
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/all.min.css">
+  <link rel="stylesheet" href="./css/style1.css">
+  <title>games  </title>
+</head>
+<body>
+  <div class=" bigpage d-block" id="mainpage">
+  <!-- ========================================================================= -->
+  <header class="position-relative ">
+    <img src="./imgs/wraper.png" alt="">
+  </header >
+    <!-- ========================================================================= -->
+
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary container rounded-4  d-flex  ">
+    <div class="container  ">
+      <a class="navbar-brand" href="#"> 
+        <img  src="./imgs/logo-sm.png" alt="">
+        GAME REVIEWS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto ">
+          <li onclick="getGames('mmorpg')" class="nav-item  mx-1">
+            <a class="nav-link " aria-current="page" href="#">MMORPG</a>
+          </li>
+          <li onclick="getGames('shooter')" class="nav-item mx-1">
+            <a class="nav-link" href="#">SHOOTER</a>
+          </li>
+          <li onclick="getGames('sailing')" class="nav-item mx-1">
+            <a class="nav-link" href="#">SAILING</a>
+          </li>
+          <li onclick="getGames('permadeath')" class="nav-item mx-1">
+            <a class="nav-link" href="#">PERMADEATH</a>
+          </li>
+          <li onclick="getGames('superhero')" class="nav-item mx-1">
+            <a class="nav-link" href="#">SUPERHERO</a>
+          </li>
+          <li onclick="getGames('pixel')" class="nav-item mx-1">
+            <a class="nav-link" href="#">PIXEL</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  <!-- ======================================================= -->
+  <div class="container ">
+    <div id="rowData" class="row ">
+      
+    </div>
+  </div>
+</div>
+  <!-- ======================================================= -->
+  <div id="masterx" class="container-fluid Details-Game d-none ">
+    <div  class="row aboutGame " >
+      <div>Details Game</div>
+      <div class="col-md-4">
+        <img class="w-100" src="${z.thumbnail}" alt="">
+      </div>
+      <div class="col-md-8">
+        <h1>${z.title}</h1>
+        <p>${z.thumbnail}</p>
+        <p>${z.platform}</p>
+        <p>${z.status}</p>
+        <p>${z.description}</p>
+        <button class="btn btn-info"  ><a  href="${z.freetogame_profile_url}"></a> show game </button>
+      </div>
+    </div>
+  </div>
+  <div class="loading d-none" id="loading">
+    <span class="loader"></span>
+    <p  style="color: white;">loading</p>
+  </div>
+
+  
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/games.js"></script>
+</body>
+</html>
